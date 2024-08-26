@@ -1,0 +1,7 @@
+selenium==4.23.1
+DateTime==5.5
+schedule==1.2.2
+python-dotenv==1.0.1
+undetected-chromedriver==3.5.5
+webdriver-manager==4.0.2
+fake-useragent==1.5.1
