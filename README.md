@@ -8,9 +8,11 @@ This is a **[Rival Regions](https://rivalregions.com)** related bot which automa
 
 ## How to use the bot?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_WwilnJU_JM?si=7_omsZjO2CBLkQkR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</br>
-</br>
+<div style="align: center;">
+    <a href="https://www.youtube.com/watch?v=_WwilnJU_JM">
+        <img src="http://i.ytimg.com/vi/_WwilnJU_JM/hqdefault.jpg"</img>
+    </a>
+</div>
 
 - Install **[python - 3.10]()** 
 - Now use git to make a local repository of this repository
