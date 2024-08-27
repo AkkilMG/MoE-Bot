@@ -18,7 +18,7 @@ async def main():
             while checked['success']:
                 print(f"--------------------------------------------")
                 await moe(auth['driver'], auth['c_html'])
-                time.sleep(605)
+                time.sleep(605) # seconds
     except Exception as e:
         print(f"Exception occurred (main): {e}")
         return
