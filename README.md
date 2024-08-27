@@ -14,7 +14,7 @@ This is a **[Rival Regions](https://rivalregions.com)** related bot which automa
     </a>
 </div>
 
-- Install **[python - 3.10]()** 
+- Install **[python - 3.10](https://www.python.org/downloads/release/python-31010/)** 
 - Now use git to make a local repository of this repository
     ```git
     git clone https://github.com/AkkilMG/MoE-Bot
