@@ -16,11 +16,11 @@ from fake_useragent import UserAgent
 
 async def login():
     options = Options()
-    # Mobile version
-    # options.add_argument("--window-size=375,812")
-    # Desktop version
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
-    # options.add_argument("--window-size=1920,1080")
+    # Ensure the browser window size is set to a desktop resolution to force the PC version of the website
+    # options.add_argument("--headless")
+    # I am using the selenium and it automatically makes the browser of mobile, as all website interact with mobile version of website, could you please help me to make it desktop version of website. I am using the following code: 
+    options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3")
+    options.add_argument("--window-size=1920,1080")
     options.add_argument("--disable-web-security")
     options.add_argument("--disable-site-isolation-trials")
     options.add_argument('--log-level=1')
@@ -29,8 +29,6 @@ async def login():
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
-    ua = UserAgent()
-    options.add_argument(f'user-agent={ua.random}')
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=options)
     driver.maximize_window()
@@ -39,9 +37,13 @@ async def login():
         sleep(random.uniform(min_delay, max_delay))
 
     try:
+        human_delay()
+        driver.get("https://google.com")
+        
+        driver.refresh()
+        human_delay()
         driver.get("https://rivalregions.com")
         WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.NAME, 'mail')))
-        
         if 'Rival Regions: world strategy of war and politics Create your own states in RR – simulator of politics, wars, business and media!' in driver.page_source:
             print("Login page detected")
 

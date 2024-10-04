@@ -64,8 +64,9 @@ async def law_passer(driver, c_html, res):
                 except Exception as e:
                     print(e)
                     return { 'success': False }
-            print(f"Law passed @{datetime.datetime.now()}")
-            return { 'success': True }
+            else:
+                print(f"Law passed @{datetime.datetime.now()}")
+                return { 'success': True }
         else:
             print("Failed to pass law")
             return { 'success': False }
