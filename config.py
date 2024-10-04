@@ -27,3 +27,7 @@ except:
     resource = 0
 # regions = int(os.environ["regions"])
 
+if 'true' in os.environ["republic"]:
+    republic = True
+elif 'false' in os.environ["republic"]:
+    republic = False
