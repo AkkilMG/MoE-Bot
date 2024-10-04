@@ -61,8 +61,9 @@ async def login():
 
         login_button = driver.find_element(By.CSS_SELECTOR, 'input[type="submit"]')
         login_button.click()
+        human_delay()
         WebDriverWait(driver, 10).until(EC.url_changes("https://rivalregions.com"))
-
+        human_delay()
         driver.refresh()
         cookies = driver.get_cookies()
         actual_cookie = {cookie['name']: cookie['value'] for cookie in cookies}
