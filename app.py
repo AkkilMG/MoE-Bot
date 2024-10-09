@@ -1,4 +1,4 @@
-# (c) 2022-2023, Akkil MG & Saiesh Savant
+# (c) 2022-2023, Akkil MG
 # License: GNU General Public License v3.0
 
 import asyncio
